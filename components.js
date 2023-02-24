@@ -21,9 +21,16 @@ class Paper extends HTMLElement {
   connectedCallback () {
     const shadow = this.attachShadow( { mode: 'closed' } );
 
+    // href stuff
+    !this.href.includes( "://" ) ? ( this.href = `https://${ this.href }` )
+      : ( this.href = this.href );
+
+    let host = new URL( this.href ).hostname;
+    host = host.replace( "www.", "" ).split( "." ).slice( -2 ).join( "." );
+    // icon stuff
     if ( !this.icon ) this.icon = "bookmark";
     let icon = this.icon.includes( ":" ) ? this.icon : `fas:${ this.icon }`;
-
+    // tags stuff
     let tags = ( this.tags || "" )?.split( "," ).map( tag => {
       if ( !tag ) return "";
 
@@ -37,7 +44,7 @@ class Paper extends HTMLElement {
       <style>
         a {
           font-size: 16px;
-          display: inline-block;
+          display: block;
           padding: 0.5em 1em;
           border: 1px solid #8884;
           border-radius: 5px;
@@ -72,9 +79,9 @@ class Paper extends HTMLElement {
         }
       </style>
 
-      <a href="https://${ this.href }" title="${ this.title }">
+      <a href="${ this.href }" title="${ this.title }">
         <img src="https://api.nukes.in/icon/${ icon }.svg" height="16px" width="16px" />
-        <span>${ this.title }</span>
+        <span><b>${ host }:</b> ${ this.title }</span>
         <p style="width:100%;text-align:right;">
           ${ tags }
         </p>

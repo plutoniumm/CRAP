@@ -1,2 +1,5 @@
-- Sidebar
+- **Sidebar**
   - [Home](/)
+  - [Docs](/docs.md)
+- **Past**
+  - [Feb 2023](./past/feb23.md)

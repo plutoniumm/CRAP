@@ -50,16 +50,22 @@
       basePath: path,
       maxLevel: 3,
       nameLink: path,
-      // For <pa-per href title icon tags>
-      // // icons must be in UrsusAPI format
+      // SEE DOCS for <pa-per>
       tag_colors: new Map( [
         [ "RL", "#faa" ],
-        [ "QML", "#73c" ]
+        [ "QML", "#73c;color:#fff" ],
+        [ "Meta", "#fca" ],
+        [ "Gen", "#fca" ],
+        [ "MeL", "#aaf" ]
       ] ),
       replacers: new Map( [
         [ "RL", "Reinforcement Learning" ],
-        [ "QML", "Quantum Learning" ]
-      ] )
+        [ "QML", "Quantum Learning" ],
+        [ "Gen", "General Math" ],
+        [ "Meta", "General Math" ],
+        [ "MeL", "Meta Learning" ]
+      ] ),
+      // END pa-per
     };
   </script>
   <!-- Docsify v4 -->
