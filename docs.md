@@ -1,5 +1,5 @@
 # Web Components
-## `pa-per` Usage
+## `<pa-per>` Usage
 ```html
 <pa-per
 href="storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphazero-shedding-new-light-on-chess-shogi-and-go/alphazero_preprint.pdf"

@@ -9,3 +9,6 @@ Coding And Reading Papers with Plutonium &amp; Patra, so technically it should b
 graph LR
     DecidePaper["Decide on a Paper"] --> ReadPaper["Read Paper"] --> Struggle
 ```
+
+## Current Papers
+
