@@ -11,4 +11,6 @@ graph LR
 ```
 
 ## Current Papers
-
+<!-- random papers for sake of format -->
+- [ ] [A Survey of Deep Learning Techniques for Graph Classification](https://arxiv.org/abs/1901.00596)
+- [ ] [A Survey of Graph Neural Networks](https://arxiv.org/abs/1901.00596)

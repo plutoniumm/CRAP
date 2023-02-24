@@ -43,8 +43,9 @@ class Paper extends HTMLElement {
     shadow.innerHTML = `
       <style>
         a {
+          max-width: min(100%, 600px);
           font-size: 16px;
-          display: block;
+          display: flex;
           padding: 0.5em 1em;
           border: 1px solid #8884;
           border-radius: 5px;
@@ -57,7 +58,7 @@ class Paper extends HTMLElement {
         img{
           margin-right: 0.5em;
           position: relative;
-          top: 1px;
+          top: 6px;
           object-fit: contain;
           object-position: center center;
           opacity: 0.5;
@@ -81,10 +82,12 @@ class Paper extends HTMLElement {
 
       <a href="${ this.href }" title="${ this.title }">
         <img src="https://api.nukes.in/icon/${ icon }.svg" height="16px" width="16px" />
-        <span><b>${ host }:</b> ${ this.title }</span>
-        <p style="width:100%;text-align:right;">
+        <div style="width:100%;">
+          <span><b>${ host }:</b> ${ this.title }</span>
+          <p style="width:100%;text-align:right;">
           ${ tags }
-        </p>
+          </p>
+        </div>
       </a>`;
   }
 
