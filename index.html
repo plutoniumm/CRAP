@@ -7,9 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 
-  <link rel="stylesheet" href="//api.nukes.in/css/global.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://api.nukes.in/css/global.css">
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/brands.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/regular.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/solid.css" />
 
   <style>
     body {
@@ -20,6 +24,11 @@
       font-family: 'Brush Script MT', cursive;
       font-size: 32px;
     }
+
+    code,
+    pre {
+      border-radius: 10px;
+    }
   </style>
 </head>
 
@@ -28,9 +37,11 @@
   <script>
     const path = window.location.pathname;
     window.$docsify = {
+      search: 'auto',
       name: 'CRAP',
       repo: 'CRAP',
       maxLevel: 3,
+      themeColor: '#000',
       coverpage: false,
       auto2top: true,
       loadSidebar: true,
@@ -42,6 +53,30 @@
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <script type="module">
+    import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js';
+    import mermaid from "https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.0.0/mermaid.esm.mjs";
+
+    setTimeout( () => {
+      createApp( {
+        data () {
+          return {
+            data: new Array( 10 ).fill( 0 )
+          }
+        }
+      } ).mount( 'article' );
+      mermaid.initialize( {
+        securityLevel: 'loose',
+        theme: 'base',
+        startOnLoad: false
+      } );
+      mermaid.run( {
+        querySelector: '.lang-mermaid',
+      } );
+    }, 500 )
+  </script>
+  <script defer src="https://unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
 </body>
 
 </html>
