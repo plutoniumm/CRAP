@@ -35,9 +35,7 @@ class Paper extends HTMLElement {
       if ( !tag ) return "";
 
       let color = tag_colors.get( tag ) || "#fff;border: 1px solid #8882";
-      const span = `
-        <span class="tag " style="background: ${ color }">${ replacers.get( tag ) || tag }</span>`;
-      return span;
+      return `<span class="tag " style="background: ${ color }">${ replacers.get( tag ) || tag }</span>`;
     } ).join( "" );
 
     shadow.innerHTML = `
@@ -92,6 +90,8 @@ class Paper extends HTMLElement {
   }
 
 }
-
 // register component
 customElements.define( 'pa-per', Paper );
+/* Example
+<pa-per href="https://google.com" title="Google" icon="fas:google" tags="search,google"></pa-per>
+*/
