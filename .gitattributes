@@ -1,2 +1,5 @@
 docs/* linguist-documentation=false
 docs/*.html linguist-language=Vue
+
+# make md detectable
+*.md linguist-language=Markdown linguist-detectable=true
