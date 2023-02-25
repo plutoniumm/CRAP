@@ -2,5 +2,8 @@
   "scripts": {
     "serve": "docsify serve .",
     "build": "bun ./scripts/build.ts"
+  },
+  "dependencies": {
+    "devalue": "^4.3.0"
   }
 }

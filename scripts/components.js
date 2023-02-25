@@ -89,9 +89,37 @@ class Paper extends HTMLElement {
       </a>`;
   }
 
-}
-// register component
-customElements.define( 'pa-per', Paper );
+}; customElements.define( 'pa-per', Paper );
 /* Example
 <pa-per href="https://google.com" title="Google" icon="fas:google" tags="search,google"></pa-per>
+*/
+
+class Icon extends Image {
+  constructor () {
+    super();
+    this.name = 'Icon';
+  }
+
+  // component attributes
+  static get observedAttributes () {
+    return [ 'src', 'height', 'width', 'alt', 'style' ];
+  }
+
+  // attribute change
+  attributeChangedCallback ( property, oldValue, newValue ) {
+    if ( oldValue === newValue ) return;
+    this[ property ] = newValue;
+  }
+
+  // connect component
+  connectedCallback () {
+    this.src = `https://api.nukes.in/icon/${ this.src }.svg`;
+    this.height = this.height || "16px";
+    this.width = this.width || "16px";
+    this.alt = this.alt || "Icon";
+    this.style = this.style || "object-fit: contain;object-position: center center;";
+  }
+}; customElements.define( 'i-c', Icon );
+/* Example
+<i-c src="fas:google" height="16px" width="16px" alt="Google" style="filter:invert(86%);"></i-c>
 */

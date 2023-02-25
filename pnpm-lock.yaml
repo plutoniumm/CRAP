@@ -1,0 +1,13 @@
+lockfileVersion: 5.4
+
+specifiers:
+  devalue: ^4.3.0
+
+dependencies:
+  devalue: 4.3.0
+
+packages:
+
+  /devalue/4.3.0:
+    resolution: {integrity: sha512-n94yQo4LI3w7erwf84mhRUkUJfhLoCZiLyoOZ/QFsDbcWNZePrLwbQpvZBUG2TNxwV3VjCKPxkiiQA6pe3TrTA==}
+    dev: false

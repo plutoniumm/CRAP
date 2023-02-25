@@ -1,5 +1,5 @@
 # :fa-solid fa-toilet-paper: The CRAP System
-Coding And Reading Papers with Plutonium &amp; Patra, so technically it should be CRAPPP or CRAP-PP idk
+**C**oding **A**nd **R**eading **P**apers with Plutonium &amp; Patra, so technically it should be CRAPPP or CRAP-PP idk
 
 !> [Click Here for Prod](https://plutoniumm.github.io/CRAP/)
 

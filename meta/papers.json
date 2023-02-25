@@ -1,0 +1,120 @@
+[
+  [
+    1,
+    8,
+    12,
+    15,
+    18,
+    21,
+    25,
+    29,
+    33
+  ],
+  [
+    "Map",
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "href",
+  "https:\u002F\u002Fstorage.googleapis.com\u002Fdeepmind-media\u002FDeepMind.com\u002FBlog\u002Falphazero-shedding-new-light-on-chess-shogi-and-go\u002Falphazero_preprint.pdf",
+  "title",
+  "A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play",
+  "tags",
+  "RL",
+  [
+    "Map",
+    2,
+    9,
+    4,
+    10,
+    6,
+    11
+  ],
+  "https:\u002F\u002Farxiv.org\u002Fpdf\u002F2101.11020.pdf",
+  "Supervised QML is Kernel Methods",
+  "QML",
+  [
+    "Map",
+    2,
+    13,
+    4,
+    14,
+    6,
+    7
+  ],
+  "https:\u002F\u002Fnature.com\u002Farticles\u002Fs41586-021-03819-2",
+  "Highly accurate protein structure prediction with AlphaFold",
+  [
+    "Map",
+    2,
+    16,
+    4,
+    17,
+    6,
+    7
+  ],
+  "https:\u002F\u002Far5iv.labs.arxiv.org\u002Fhtml\u002F2110.02758",
+  "Mismatched No More: A Unified Framework for Learning to Match and Rank",
+  [
+    "Map",
+    2,
+    19,
+    4,
+    20,
+    6,
+    11
+  ],
+  "https:\u002F\u002Far5iv.labs.arxiv.org\u002Fhtml\u002F2008.02369",
+  "QUBO Formulations for Training Machine Learning Models",
+  [
+    "Map",
+    2,
+    22,
+    4,
+    23,
+    6,
+    24
+  ],
+  "https:\u002F\u002Farxiv.org\u002Fpdf\u002F2207.00787.pdf",
+  "Object Representations as Fixed Points: Training Iterative Refinement Algorithms with Implicit Differentiation",
+  "Meta",
+  [
+    "Map",
+    2,
+    26,
+    4,
+    27,
+    6,
+    28
+  ],
+  "https:\u002F\u002Farxiv.org\u002Fpdf\u002F1703.03400.pdf",
+  "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+  "MeL",
+  [
+    "Map",
+    2,
+    30,
+    4,
+    31,
+    6,
+    32
+  ],
+  "https:\u002F\u002Farxiv.org\u002Fpdf\u002F1807.01613.pdf",
+  "Conditional Neural Processes",
+  "Neuro",
+  [
+    "Map",
+    2,
+    34,
+    4,
+    35,
+    6,
+    32
+  ],
+  "https:\u002F\u002Fpapers.nips.cc\u002Fpaper\u002F2020\u002Ffile\u002F6e17a5fd135fcaf4b49f2860c2474c7c-Paper.pdf",
+  "Neural Complexity Measures"
+]

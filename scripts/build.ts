@@ -1,6 +1,7 @@
 // This file will run ONLY on Bun.js
 // to run in node replace Bun.file.text with fs.readFileSync,utf-8
 import { readdirSync } from "fs";
+import { parse, stringify } from "devalue";
 
 const files = readdirSync("./past"); // Get all files in the 'past' directory
 
@@ -45,4 +46,6 @@ for await (const paper of globalPapersObj) {
   paper.set("href", `https://${href}`); // Add https
 };
 
+//
 console.log(globalPapersObj);
+Bun.write("./meta/papers.json", stringify(globalPapersObj)); // Write the array to a file
