@@ -4,6 +4,13 @@ import { readdirSync } from "fs";
 
 const files = readdirSync("./past"); // Get all files in the 'past' directory
 
+/*
+The following code is CONDITIONAL that the paper tag looks like this
+  <pa-per href="https://example.com"
+     T-attribute="T-value" (multiple attrs allowed, last of repetition will be taken)
+  />
+*/
+
 // EXTRACT ALL PAPERS
 const globalPapers: Array<string> = [];
 for await (const file of files) {

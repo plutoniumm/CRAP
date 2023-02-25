@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "serve": "docsify serve .",
+    "build": "bun ./scripts/build.ts"
+  }
+}
