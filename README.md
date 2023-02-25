@@ -1,4 +1,4 @@
-# :fa-solid fa-toilet-paper: The CRAP System
+# <i-c src="fas:toilet-paper" size="1.75" style="opacity:0.66;"></i-c> The CRAP System
 **C**oding **A**nd **R**eading **P**apers with Plutonium &amp; Patra, so technically it should be CRAPPP or CRAP-PP idk
 
 !> [Click Here for Prod](https://plutoniumm.github.io/CRAP/)

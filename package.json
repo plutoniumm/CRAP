@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "serve": "docsify serve .",
+    "dev": "docsify serve .",
     "build": "bun ./scripts/build.ts"
   },
   "dependencies": {

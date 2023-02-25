@@ -94,7 +94,7 @@ class Paper extends HTMLElement {
 <pa-per href="https://google.com" title="Google" icon="fas:google" tags="search,google"></pa-per>
 */
 
-class Icon extends Image {
+class Icon extends HTMLElement {
   constructor () {
     super();
     this.name = 'Icon';
@@ -102,7 +102,7 @@ class Icon extends Image {
 
   // component attributes
   static get observedAttributes () {
-    return [ 'src', 'height', 'width', 'alt', 'style' ];
+    return [ 'src', 'height', 'width', 'alt', 'style', 'size' ];
   }
 
   // attribute change
@@ -113,11 +113,31 @@ class Icon extends Image {
 
   // connect component
   connectedCallback () {
-    this.src = `https://api.nukes.in/icon/${ this.src }.svg`;
-    this.height = this.height || "16px";
-    this.width = this.width || "16px";
+    const shadow = this.attachShadow( { mode: 'closed' } );
+
+    if ( this.size ) {
+      this.height = +this.size * 16 + "px";
+      this.width = +this.size * 16 + "px";
+    }
+    else {
+      this.height = this.height || "16px";
+      this.width = this.width || "16px";
+    };
+
+
     this.alt = this.alt || "Icon";
-    this.style = this.style || "object-fit: contain;object-position: center center;";
+    this.style = this.style.cssText || "";
+
+    shadow.innerHTML = `
+      <style>
+        img{
+          object-fit: contain;
+          object-position: center center;
+        }
+      </style>
+
+      <img src="https://api.nukes.in/icon/${ this.src }.svg" height="${ this.height }" width="${ this.width }" alt="${ this.alt }" style="${ this.style }" />
+    `;
   }
 }; customElements.define( 'i-c', Icon );
 /* Example

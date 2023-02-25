@@ -1,5 +1,6 @@
 - **Sidebar**
   - [Home](/)
   - [Docs](/docs.md)
+  - [Every Paper Ever](./every.md)
 - **Past**
   - [Feb 2023](./past/feb23.md)

@@ -76,24 +76,34 @@
   <script type="module">
     import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js';
     import mermaid from "https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.0.0/mermaid.esm.mjs";
+    import { parse } from "https://cdn.jsdelivr.net/npm/devalue@latest/index.js";
 
-    setTimeout( () => {
-      createApp( {
+    const getPapers = async () => {
+      const papers = await fetch( '/meta/papers.json' ).then( r => r.text() );
+
+      return parse( papers );
+    }
+
+    setTimeout( async () => {
+      const app = createApp( {
         data () {
           return {
-            data: new Array( 10 ).fill( 0 )
+            data: new Array( 10 ).fill( 0 ),
+            papers: [
+              {
+                href: "",
+                title: "Loading...",
+                tags: [],
+              }
+            ]
           }
         }
       } ).mount( 'article' );
 
-      mermaid.initialize( {
-        securityLevel: 'loose',
-        theme: 'base',
-        startOnLoad: false
-      } );
-      mermaid.run( {
-        querySelector: '.lang-mermaid',
-      } );
+      mermaid.initialize( { securityLevel: 'loose', theme: 'base', startOnLoad: false } );
+      mermaid.run( { querySelector: '.lang-mermaid', } );
+
+      app.papers = await getPapers();
     }, 500 )
   </script>
   <script async defer src="https://unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
